@@ -1,0 +1,19 @@
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "nixpacksPlan": {
+      "phases": {
+        "install": {
+          "dependsOn": ["setup"],
+          "cmds": ["./mvnw clean package -DskipTests"]
+        }
+      }
+    }
+  },
+  "deploy": {
+    "startCommand": "java -jar target/chat-app-0.0.1-SNAPSHOT.jar",
+    "healthcheckPath": "/actuator/health",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}
