@@ -1,1 +1,1 @@
-web: java -jar target/chat-backend-0.0.1-SNAPSHOT.jar
+web: java -jar backend/target/chat-backend-0.0.1-SNAPSHOT.jar

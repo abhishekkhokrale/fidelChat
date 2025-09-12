@@ -2,7 +2,9 @@ FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
-COPY target/chat-backend-0.0.1-SNAPSHOT.jar app.jar
+COPY backend/target/chat-backend-0.0.1-SNAPSHOT.jar app.jar
+
+
 
 EXPOSE 8080
 
